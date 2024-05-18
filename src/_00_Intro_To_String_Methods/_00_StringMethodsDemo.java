@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class _00_StringMethodsDemo {
     /*
-     * In Java Strings are objects that are immutable, meaning you can't
+     * In Java, Strings are objects that are immutable, meaning you can't
      * directly modify or change them. Java provides methods that indirectly
      * modify a String by returning a new String object with the modifications.
      * 
