@@ -59,7 +59,15 @@ public class _01_StringMethods {
     // You cannot assume there are no extra spaces around the name, but you can
     // assume there is only one space between the first and last name
     public static String lineLeader(String s1, String s2, String s3) {
-    	
+    	for (int i = 0; i < s1.length(); i++) {
+    		s1.trim();
+    	}
+    	for (int i = 0; i < s2.length(); i++) {
+    		s2.trim();
+    	}
+    	for (int i = 0; i < s3.length(); i++) {
+    		s3.trim();
+    	}
         return null;
     }
 
