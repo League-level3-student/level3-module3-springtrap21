@@ -1,5 +1,6 @@
 package _00_Intro_To_String_Methods;
 
+import java.util.Arrays;
 import java.util.Base64;
 
 /*
@@ -58,17 +59,25 @@ public class _01_StringMethods {
     // were in alphabetical order.
     // You cannot assume there are no extra spaces around the name, but you can
     // assume there is only one space between the first and last name
+    public static char getLastNameChar (String s1) {
+    	s1.trim();
+    	char lastChar = s1.charAt(s1.length() -1);
+		return lastChar;
+    }
     public static String lineLeader(String s1, String s2, String s3) {
-    	for (int i = 0; i < s1.length(); i++) {
-    		s1.trim();
-    	}
-    	for (int i = 0; i < s2.length(); i++) {
-    		s2.trim();
-    	}
-    	for (int i = 0; i < s3.length(); i++) {
-    		s3.trim();
-    	}
-        return null;
+    	char lastNames1 = getLastNameChar(s1);
+    	char lastNames2 = getLastNameChar(s2);
+    	char lastNames3 = getLastNameChar(s3);
+    	if (lastNames1 > lastNames2 & lastNames1 > lastNames3) {
+			return s1;
+		}
+    	if (lastNames2 > lastNames1 & lastNames2 > lastNames3) {
+			return s2;
+		}
+    	if (lastNames3 > lastNames1 & lastNames3 > lastNames2) {
+			return s3;
+		}
+		return null;
     }
 
     // Return the sum of all numerical digits in the String
