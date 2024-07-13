@@ -91,13 +91,22 @@ public class _01_StringMethods {
 
     // Return the sum of all numerical digits in the String
     public static int numeralSum(String s) {
-    	
-        return 0;
+    	int sum = 0;
+    	for (int i = 0; i < s.length(); i++) {    		
+    		if (Character.isDigit(s.charAt(i))) {
+				int number = Character.getNumericValue(s.charAt(i));
+				sum = number + sum;
+			}
+    	}
+        return sum;
     }
 
     // Return the number of times String substring appears in String s
     public static int substringCount(String s, String substring) {
-        return 0;
+    	for (int i = 0; i < s.length(); i++) {
+    	
+    	}
+        return 0 ;
     }
 
     // Call Utilities.encrypt at the bottom of this file to encrypt String s
