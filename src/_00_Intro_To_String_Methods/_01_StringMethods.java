@@ -103,21 +103,28 @@ public class _01_StringMethods {
 
     // Return the number of times String substring appears in String s
     public static int substringCount(String s, String substring) {
-    	for (int i = 0; i < s.length(); i++) {
-    	
+    	int times = 0;
+    	int index = s.indexOf(substring, 0);
+    	while(index != -1) {
+    		times ++;
+    		index = s.indexOf(substring, index + substring.length());
     	}
-        return 0 ;
+        return times;
     }
 
     // Call Utilities.encrypt at the bottom of this file to encrypt String s
     public static String encrypt(String s, char key) {
-        return null;
+    	String str = null;
+    	str = Utilities.encrypt(s.getBytes(), (byte) key);
+        return str;
     }
 
     // Call Utilities.decrypt at the bottom of this file to decrypt the
     // cyphertext (encrypted text)
     public static String decrypt(String s, char key) {
-        return null;
+    	String str = null;
+    	str = Utilities.decrypt(s, (byte) key);
+        return str;
     }
 
     // Return the number of words in String s that end with String substring
