@@ -39,10 +39,9 @@ public class _01_StringMethods {
         if (s1.length() > s2.length()) {
 			return s1;
 		}
-        if (s2.length() > s1.length()) {
+        else  {
 			return s2;
 		}
-        return "equal";
     }
 
     // If String s contains the word "underscores", change all of the spaces
@@ -132,7 +131,7 @@ public class _01_StringMethods {
     public static int wordsEndsWithSubstring(String s, String substring) {
     	int numWords = 0;
     	for (int i = 0; i < s.length(); i++) {
-    		char lastLetter = s.charAt(i-1);
+    		s.indexOf(substring);
     	}
         return numWords;
     }
