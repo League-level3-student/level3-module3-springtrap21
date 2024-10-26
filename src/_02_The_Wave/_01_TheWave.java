@@ -2,7 +2,7 @@ package _02_The_Wave;
 
 import java.util.ArrayList;
 
-public class _01_TheWave {
+
     /*
      * Background:
      * https://en.wikipedia.org/wiki/Wave_%28audience%29 
@@ -18,9 +18,18 @@ public class _01_TheWave {
      * 2. If the character in the string is whitespace then pass over it as
      *    if it was an empty seat.
      */
+public class _01_TheWave {
     
     public static ArrayList<String> wave(String str) {
-        
-        return null;
+        ArrayList<String> finalWords = new ArrayList<>();
+        for (int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) != ' ') {
+				StringBuilder stringWave = new StringBuilder(str);
+				stringWave.setCharAt(i, Character.toUpperCase(stringWave.charAt(i)));
+				finalWords.add(stringWave.toString());
+				System.out.println(finalWords);
+			}
+		}
+        return finalWords;
     }
 }
